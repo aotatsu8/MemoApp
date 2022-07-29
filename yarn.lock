@@ -1872,6 +1872,11 @@
     "@urql/core" ">=2.3.1"
     "wonka" "^4.0.14"
 
+"@use-expo/font@^2.0.0":
+  "integrity" "sha512-oOJ2uaRyZNQg7PnQviz7nBcdrRL38zxScab4ktgtI4asa6G0dHW9wg307uJJmn0sHS04Yqtw+m0EOjDcGw3iWg=="
+  "resolved" "https://registry.npmjs.org/@use-expo/font/-/font-2.0.0.tgz"
+  "version" "2.0.0"
+
 "@xmldom/xmldom@~0.7.0":
   "integrity" "sha512-V3BIhmY36fXZ1OtVcI9W+FxQqxVLsPKcNjWigIaa81dLC9IolJl5Mt4Cvhmr0flUnjSpTdrbMTSbXqYqV5dT6A=="
   "resolved" "https://registry.npmjs.org/@xmldom/xmldom/-/xmldom-0.7.5.tgz"
@@ -3501,7 +3506,7 @@
     "@expo/config-plugins" "^4.0.14"
     "uuid" "^3.4.0"
 
-"expo-font@~10.1.0":
+"expo-font@>=8.1.0", "expo-font@~10.1.0":
   "integrity" "sha512-vmhzpE95Ym4iOj8IELof+C/3Weert2B3LyxV5rBjGosjzBdov+o+S6b5mN7Yc9kyEGykwB6k7npL45X3hFYDQA=="
   "resolved" "https://registry.npmjs.org/expo-font/-/expo-font-10.1.0.tgz"
   "version" "10.1.0"
