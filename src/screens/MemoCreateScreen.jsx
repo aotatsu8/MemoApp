@@ -3,6 +3,7 @@ import { View, StyleSheet, TextInput, KeyboardAvoidingView } from 'react-native'
 
 import AppBar from '../components/AppBar';
 import CircleButton from '../components/CircleButton';
+import KeyboardSafeView from '../components/KeyboardSafeView'; // 自作のKeyboardAvoidingViewのコンポーネント
 
 export default function MemoCreateScreen() {
   return (
