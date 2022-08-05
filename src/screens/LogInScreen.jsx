@@ -13,12 +13,22 @@ export default function LogInScreen(props) {
         <Button
           label="Submit"
           onPress={() => {
-            navigation.navigate('MemoList');
+            navigation.reset({
+              index: 0,
+              routes: [{ name: 'MemoList' }],
+            });
           }}
         />
         <View style={styles.fotter}>
           <Text style={styles.footerText}>Not registered?</Text>
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.reset({
+                index: 0,
+                routes: [{ name: 'SignUp' }],
+              });
+            }}
+          >
             <Text style={styles.footerLink}>Sign up here!</Text>
           </TouchableOpacity>
         </View>
