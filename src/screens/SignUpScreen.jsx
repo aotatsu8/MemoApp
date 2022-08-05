@@ -17,7 +17,13 @@ export default function SignUpScreen(props) {
             setEmail(text);
           }}
         />
-        <TextInput style={styles.input} value={password} onChangeText={(text) => setPassword(text)} />
+        <TextInput
+          style={styles.input}
+          value={password}
+          onChangeText={(text) => {
+            setPassword(text);
+          }}
+        />
         <Button
           label="Submit"
           onPress={() => {
