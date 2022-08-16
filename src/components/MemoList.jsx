@@ -13,7 +13,7 @@ export default function MemoList(props) {
       <TouchableOpacity
         style={styles.memoListItem}
         onPress={() => {
-          navigation.navigate('MemoDetail');
+          navigation.navigate('MemoDetail', { id: item.id });
         }}
       >
         <View>
