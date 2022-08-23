@@ -5,6 +5,7 @@ import firebase from 'firebase';
 
 import CircleButton from '../components/CircleButton';
 import KeyboardSafeView from '../components/KeyboardSafeView'; // 自作のKeyboardAvoidingViewのコンポーネント
+import { translateErrors } from '../utils';
 
 export default function MemoEditScreen(props) {
   const { navigation, route } = props;
@@ -29,7 +30,14 @@ export default function MemoEditScreen(props) {
           navigation.goBack();
         })
         .catch((error) => {
-          Alert.alert(error.code);
+          const errorMsg = translateErrors(error.code);
+          /*メモ更新に失敗した際のエラーメッセージ
+          今回は英語の翻訳がたくさんある為省略するが、本来はranslateErrors()のswich文に
+          firebaseのエラーコードを翻訳して同様の処理をする。
+          今回はデフォルトメッセージを使う。
+          参考↓
+          https://firebase.google.com/docs/reference/node/firebase.firestore#firestoreerrorcode */
+          Alert.alert(errorMsg.title, errorMsg.description);
         });
     }
   };

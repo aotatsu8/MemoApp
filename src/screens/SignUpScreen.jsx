@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, TextInput, TouchableOpacity, Alert } from 'reac
 import firebase from 'firebase';
 
 import Button from '../components/Button';
+import { translateErrors } from '../utils';
 
 export default function SignUpScreen(props) {
   const { navigation } = props;
@@ -22,8 +23,9 @@ export default function SignUpScreen(props) {
         console.log(user.uid);
       })
       .catch((error) => {
-        Alert.alert(error.code);
         console.log(error.code, error.message);
+        const errorMsg = translateErrors(error.code);
+        Alert.alert(errorMsg.title, errorMsg.description);
       });
   }
 
