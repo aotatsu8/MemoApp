@@ -31,13 +31,11 @@ export default function LogInScreen(props) {
     firebase
       .auth()
       .signInWithEmailAndPassword(email, password)
-      .then((userCredential) => {
-        const { user } = userCredential;
+      .then(() => {
         navigation.reset({
           index: 0,
           routes: [{ name: 'MemoList' }],
         });
-        console.log(user.uid);
       })
       .catch((error) => {
         const errorMsg = translateErrors(error.code);
