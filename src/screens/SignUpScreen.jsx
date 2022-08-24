@@ -20,10 +20,8 @@ export default function SignUpScreen(props) {
           index: 0,
           routes: [{ name: 'MemoList' }],
         });
-        console.log(user.uid);
       })
       .catch((error) => {
-        console.log(error.code, error.message);
         const errorMsg = translateErrors(error.code);
         Alert.alert(errorMsg.title, errorMsg.description);
       });
