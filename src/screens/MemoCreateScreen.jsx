@@ -27,7 +27,7 @@ export default function MemoCreateScreen(props) {
       });
   }
   return (
-    <KeyboardAvoidingView style={styles.container} behavior="height">
+    <KeyboardSafeView style={styles.container} behavior="height">
       <View style={styles.inputContainer}>
         <TextInput
           value={bodyText}
@@ -40,7 +40,7 @@ export default function MemoCreateScreen(props) {
         />
       </View>
       <CircleButton name="check" onPress={handlePress} />
-    </KeyboardAvoidingView>
+    </KeyboardSafeView>
   );
 }
 
